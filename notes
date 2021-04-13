@@ -1,0 +1,26 @@
+// using css grid for snake rather than canvas
+
+
+ let lastRenderTime = 0
+const SNAKE_SPEED = 2 // how many times snake moves per second
+
+// setting up game loop to constantly update render //
+function main(currentTime) {
+    const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000 
+    //as it's in milliseconds
+    if (secondsSinceLastRender < 1 / SNAKE_SPEED) return
+    
+    console.log('Render')
+    lastRenderTime = currentTime 
+}
+
+window.requestAnimationFrame(main) //so can start loop first time
+
+
+export function update() {
+    for (let i = snakeBody.length - 2; i >= 0; i--) {
+        
+    }
+} // for loop as only want to loop throught every segments except
+for last as last segment of snake going to essentially 'disappear'
+for movement effect
